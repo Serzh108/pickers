@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -13,7 +19,7 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #17c4f4aa);
 }
 
 @keyframes logo-spin {
@@ -26,7 +32,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a .logo {
+  .logo {
     animation: logo-spin infinite 20s linear;
   }
 }

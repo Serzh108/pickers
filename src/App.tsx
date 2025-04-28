@@ -1,17 +1,19 @@
 import logo from './assets/logo.svg';
 import './App.css';
+import BasicDatePicker from './components/DatePicker/DatePicker';
+import BasicTimePicker from './components/TimePicker/TimePicker';
 
 function App() {
   return (
     <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={logo} className="logo" alt="logo" />
-        </a>
+      <div className="header">
+        <img src={logo} className="logo" alt="logo" width="48px" />
+        <h1>Date + Time peackers</h1>
       </div>
-      <h1>Date + Time peackers</h1>
 
       <p className="read-the-docs">Click on SerZH logo to learn React more</p>
+      <BasicDatePicker />
+      <BasicTimePicker />
     </>
   );
 }
