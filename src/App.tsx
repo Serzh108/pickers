@@ -1,11 +1,17 @@
+import { lazy, Suspense } from 'react';
 import logo from './assets/logo.svg';
 import './App.css';
-import BasicDatePicker from './components/DatePicker/DatePicker';
-import BasicTimePicker from './components/TimePicker/TimePicker';
+
+const BasicDatePicker = lazy(
+  () => import('./components/DatePicker/DatePicker'),
+);
+const BasicTimePicker = lazy(
+  () => import('./components/TimePicker/TimePicker'),
+);
 
 function App() {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className="header">
         <img src={logo} className="logo" alt="logo" width="48px" />
         <h1>Date + Time peackers</h1>
@@ -14,7 +20,7 @@ function App() {
       <p className="read-the-docs">Click on SerZH logo to learn React more</p>
       <BasicDatePicker />
       <BasicTimePicker />
-    </>
+    </Suspense>
   );
 }
 
